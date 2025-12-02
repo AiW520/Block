@@ -206,7 +206,9 @@ export default function CompetitionChannels() {
 
   const nowISOString = () => {
     const d = new Date();
-    return d.toISOString().replace(/[-:\\.]/g, '').split('Z')[0] + 'Z';
+    // avoid regex literal so Tailwind's scanner doesn't mis-detect class-like patterns
+      const re = new RegExp('(?:-|:|\\.)', 'g');
+    return d.toISOString().replace(re, '').split('Z')[0] + 'Z';
   };
 
   // 生成单个竞赛的 VEVENT 字符串

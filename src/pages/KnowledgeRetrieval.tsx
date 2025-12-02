@@ -704,8 +704,20 @@ export default function KnowledgeRetrieval() {
                 onClick={() => {
                   // 简单邮箱校验
                   const email = subscriberEmail.trim();
-                  const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(".+"))@(([^<>()[\]\\.,;:\s@\"]+\.)+[^<>()[\]\\.,;:\s@\"]{2,})$/i;
-                  if (!email || !re.test(email)) {
+                  const isValidEmail = (e: string) => {
+                    if (!e) return false;
+                    const parts = e.split('@');
+                    if (parts.length !== 2) return false;
+                    const [local, domain] = parts;
+                    if (!local || !domain) return false;
+                    // require a dot in domain and at least 2 chars after last dot
+                    const lastDot = domain.lastIndexOf('.');
+                    if (lastDot === -1) return false;
+                    if (domain.length - lastDot - 1 < 2) return false;
+                    return true;
+                  };
+
+                  if (!email || !isValidEmail(email)) {
                     setSubscribeMessage('请输入有效的邮箱地址');
                     setTimeout(() => setSubscribeMessage(null), 3000);
                     return;
