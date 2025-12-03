@@ -7,7 +7,7 @@
     "dev:client": "vite --host --port 3000",
     "dev": "pnpm dev:client",
     "build:client": "vite build --outDir dist",
-    "build": "rm -rf dist && pnpm build:client && cp package.json dist && touch dist/build.flag",
+    "build": "rmdir /s /q dist && pnpm build:client && copy package.json dist && echo.>dist/build.flag",
     "build:pages": "cross-env SITE_BASE=/BlockchainWebsite/ pnpm build:client",
     "build:gh": "cross-env SITE_BASE=/REPO_NAME/ pnpm build:client"
   },
