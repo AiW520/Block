@@ -5,6 +5,12 @@ on:
     branches:
       - main
 
+# 设置部署权限
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
