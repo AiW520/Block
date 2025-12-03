@@ -5,22 +5,14 @@ on:
     branches:
       - main
 
-# 设置部署权限
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
 jobs:
-  build-deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
-
+    permissions:
+      contents: write
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
-      - name: Configure Pages
-        uses: actions/configure-pages@v5
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -38,15 +30,8 @@ jobs:
           SITE_BASE: '/Block/'
         run: pnpm build:client
 
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
-        with:
-          path: ./dist
-
-  deploy:
-    needs: build-deploy
-    runs-on: ubuntu-latest
-    steps:
       - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v1
-        with: {}
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
