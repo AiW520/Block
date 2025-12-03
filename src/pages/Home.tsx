@@ -212,7 +212,7 @@ export default function Home() {
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Link
-                to="/basics"
+                to="/ide"
                 className="btn-hover px-8 py-3 rounded-full bg-gradient-to-r from-[#00f5ff] to-[#00ff9d] text-[#0a0a1f] font-bold text-lg text-center"
               >
                 立即开始

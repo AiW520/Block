@@ -269,54 +269,16 @@ export default function KnowledgeRetrieval() {
     return date.toLocaleDateString('zh-CN');
   };
 
-  // 在线检索 arXiv（ATOM 格式），返回简化的资源对象数组
-  const fetchArxiv = async (query: string, maxResults = 8) => {
-    try {
-      const q = encodeURIComponent(query);
-      const url = `https://export.arxiv.org/api/query?search_query=all:${q}&start=0&max_results=${maxResults}`;
-      const res = await fetch(url);
-      const text = await res.text();
-      const parser = new DOMParser();
-      const xml = parser.parseFromString(text, 'application/xml');
-      const entries = Array.from(xml.getElementsByTagName('entry'));
-      const items = entries.map((entry) => {
-        const idNode = entry.getElementsByTagName('id')[0];
-        const titleNode = entry.getElementsByTagName('title')[0];
-        const summaryNode = entry.getElementsByTagName('summary')[0];
-        const publishedNode = entry.getElementsByTagName('published')[0];
-        const linkNodes = Array.from(entry.getElementsByTagName('link'));
-        const pdfLink = linkNodes.find(l => l.getAttribute('title') === 'pdf')?.getAttribute('href') || idNode?.textContent || '';
 
-        return {
-          id: `arxiv-${Math.random().toString(36).slice(2, 9)}`,
-          title: titleNode?.textContent?.trim() || 'arXiv Paper',
-          abstract: summaryNode?.textContent?.trim() || '',
-          source: 'arXiv',
-          publishDate: publishedNode?.textContent?.slice(0,10) || new Date().toISOString().slice(0,10),
-          citations: 0,
-          type: '论文',
-          领域: '区块链',
-          link: pdfLink
-        };
-      });
-      return items;
-    } catch (err) {
-      // 失败则返回空数组
-      // console.error(err);
-      return [];
-    }
-  };
 
-  const [isOnlineSearching, setIsOnlineSearching] = useState(false);
 
-  // 在线搜索处理器（使用 arXiv）
-  const handleOnlineSearch = async () => {
+
+  // 在线搜索处理器（重定向到外部搜索引擎）
+  const handleOnlineSearch = () => {
     if (!searchTerm) return;
-    setIsOnlineSearching(true);
-    const onlineItems = await fetchArxiv(searchTerm, 8);
-    // 合并前端资源和在线结果（在线结果放前）
-    setSearchResults(prev => [...onlineItems, ...prev]);
-    setIsOnlineSearching(false);
+    // 使用百度学术作为外部搜索引擎，在国内更容易访问
+    const searchUrl = `https://xueshu.baidu.com/s?wd=${encodeURIComponent(searchTerm)}`;
+    window.open(searchUrl, '_blank');
   };
   
   // 获取类型对应的图标
@@ -375,12 +337,9 @@ export default function KnowledgeRetrieval() {
               <button
                 className="bg-[#00f5ff] text-[#0a0a1f] px-5 py-2 rounded-full font-bold"
                 disabled={!searchTerm}
-                onClick={() => {
-                  // 本地搜索由 useEffect 自动触发；此按钮也可以触发在线搜索
-                  handleOnlineSearch();
-                }}
+                onClick={handleOnlineSearch}
               >
-                {isOnlineSearching ? '搜索中...' : '搜索网络'}
+                搜索网络
               </button>
               <button
                 className="bg-transparent border border-[#2a2a4a] text-gray-300 px-4 py-2 rounded-full font-semibold"
@@ -522,7 +481,10 @@ export default function KnowledgeRetrieval() {
                         <i className={`fa-solid ${getTypeIcon(resource.type)} text-[#00f5ff]`}></i>
                       </div>
                       <div>
-                        <h3 className="text-xl font-bold mb-2 hover:text-[#00f5ff] transition-colors cursor-pointer">
+                        <h3 
+                          className="text-xl font-bold mb-2 hover:text-[#00f5ff] transition-colors cursor-pointer"
+                          onClick={() => window.open(resource.url, '_blank')}
+                        >
                           {resource.title}
                         </h3>
                         <div className="flex flex-wrap gap-2 mb-2">
@@ -629,7 +591,10 @@ export default function KnowledgeRetrieval() {
                         {index + 1}
                       </div>
                       <div>
-                        <h4 className="text-sm font-semibold mb-1 hover:text-[#00f5ff] transition-colors cursor-pointer line-clamp-2">
+                        <h4 
+                          className="text-sm font-semibold mb-1 hover:text-[#00f5ff] transition-colors cursor-pointer line-clamp-2"
+                          onClick={() => window.open(resource.url, '_blank')}
+                        >
                           {resource.title}
                         </h4>
                         <div className="flex items-center text-xs text-gray-400">
