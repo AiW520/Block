@@ -8,7 +8,7 @@
     "dev": "pnpm dev:client",
     "build:client": "vite build --outDir dist",
     "build": "rm -rf dist && pnpm build:client && cp package.json dist && touch dist/build.flag",
-    "build:pages": "cross-env SITE_BASE=/BlockchainATG/ pnpm build:client",
+    "build:pages": "cross-env SITE_BASE=/BlockchainWebsite/ pnpm build:client",
     "build:gh": "cross-env SITE_BASE=/REPO_NAME/ pnpm build:client"
   },
   "dependencies": {

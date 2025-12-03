@@ -26,7 +26,7 @@ jobs:
 
       - name: Build (Vite) with SITE_BASE
         env:
-          SITE_BASE: '/BlockchainATG/'
+          SITE_BASE: '/BlockchainWebsite/'
         run: pnpm build:client
 
       - name: Upload artifact
