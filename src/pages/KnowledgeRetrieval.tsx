@@ -18,11 +18,11 @@ const knowledgeResources = [
   },
   {
     id: 2,
-    title: "智能合约安全漏洞分析与防护",
+    title: "从理论到实践：智能合约安全漏洞挖掘与防御指南",
     url: "https://web3caff.com/archives/120018",
     type: "技术文档",
    领域: "安全",
-    source: "链源科技",
+    source: "链源科技 PandaLY",
     publishDate: "2025-03-14",
     abstract: "本报告详细分析了智能合约中常见的安全漏洞类型，包括重入攻击、整数溢出、访问控制等问题，并提供了相应的防护措施和最佳实践指南。",
     citations: 134,
@@ -30,7 +30,7 @@ const knowledgeResources = [
   },
   {
     id: 3,
-    title: "去中心化金融(DeFi)发展研究报告",
+    title: "DeFi深度研报：SEC新政，从“创新豁免”到“链上金融”，DeFi之夏或再现",
     url: "https://news.qq.com/rain/a/20250613A030LU00",
     type: "研究报告",
    领域: "金融应用",
@@ -178,7 +178,7 @@ const knowledgeResources = [
     url: "https://wenku.baidu.com/view/c7a71025ff4733687e21af45b307e87100f6f872?aggId=df6e370e534de518964bcf84b9d528ea80c72ff1&fr=catalogMain_query2ODlist_recall%3Awk_recommend_main3&_wkts_=1765280531136",
     type: "研究报告",
    领域: "基础理论",
-    source: "中国标准化协会",
+    source: "百度文库",
     publishDate: "2018-01-17",
     abstract: "本文从产业生态、发展趋势、技术创新、政策法规等方面对区块链产业进行了详细分析。",
     citations: 201,
@@ -193,7 +193,7 @@ const knowledgeResources = [
     source: "计算机研究与发展",
     publishDate: "2017-10-01",
     abstract: "介绍区块链技术架构,定义区块链技术中身份隐私和交易隐私的概念,分析区块链技术在隐私保护方面存在的优势和不足,并分类描述现有研究中针对区块链隐私的攻击方法.",
-    citations: 201,
+    citations: 199,
     link: "https://www.zhangqiaokeyan.com/academic-journal-cn_journal-computer-research-development_thesis/0201241581550.html"
   },
 
