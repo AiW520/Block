@@ -13,7 +13,7 @@ const knowledgeResources = [
     source: "骆慧勇",
     publishDate: "2016-07-05",
     abstract: "本文从技术层面解析区块链的核心,介绍了区块链相关计算机技术、数学知识以及区块链的信息交互原理,总结了区块链技术的三大价值和优缺点,并对未来应用前景进行预测。",
-    citations: 12,
+    citations: 157,
     link: "https://wenku.baidu.com/view/44e6951e5bcfa1c7aa00b52acfc789eb162d9e5b?fr=xueshu&_wkts_=1765279617199"
   },
   {
@@ -25,7 +25,7 @@ const knowledgeResources = [
     source: "链源科技",
     publishDate: "2025-03-14",
     abstract: "本报告详细分析了智能合约中常见的安全漏洞类型，包括重入攻击、整数溢出、访问控制等问题，并提供了相应的防护措施和最佳实践指南。",
-    citations: 87,
+    citations: 134,
     link: "https://web3caff.com/archives/120018"
   },
   {
@@ -73,7 +73,7 @@ const knowledgeResources = [
     source: "Renewable and Sustainable Energy Reviews",
     publishDate: "2021-03-28",
     abstract: "本文基于166篇文献的基础参考文献，通过共同引用分析分析区块链与能源的交叉领域。",
-    citations: 156,
+    citations: 120,
     link: "https://www.sciencedirect.com/science/article/pii/S1364032120308819"
   },
   {
@@ -85,7 +85,7 @@ const knowledgeResources = [
     source: "Sustainable Cities and Society",
     publishDate: "2023-10-12",
     abstract: "总结了BCT在可持续智慧城市中角色的最新趋势、挑战及未来研究方向。探讨了区块链技术在智慧城市中的隐私保护机制及其应用案例。",
-    citations: 132,
+    citations: 111,
     link: "https://www.sciencedirect.com/science/article/pii/S2210670723003086"
   },
   {
