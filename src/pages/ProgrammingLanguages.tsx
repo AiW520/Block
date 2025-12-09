@@ -39,9 +39,9 @@ const programmingLanguages = [
       "区块链工具开发"
     ],
     resources: [
-      { name: "Go官方文档", url: "https://golang.org/doc/" },
-      { name: "区块链Go语言开发", url: "https://hyperledger-fabric.readthedocs.io/en/release-2.2/developapps/go.html" },
-      { name: "并发编程指南", url: "https://golang.org/doc/effective_go#concurrency" }
+      { name: "Go官方文档", url: "https://www.topgoer.com/go%E5%9F%BA%E7%A1%80/" },
+      { name: "区块链Go语言开发", url: "https://ethereum.org/zh/developers/docs/programming-languages/golang/" },
+      { name: "并发编程指南", url: "https://blog.csdn.net/caishuangxi111/article/details/146110272" }
     ]
   },
   {

@@ -6,15 +6,15 @@ import { useTheme } from '@/hooks/useTheme';
 const knowledgeResources = [
   {
     id: 1,
-    title: "区块链技术原理与应用",
-    url: "https://www.tup.com.cn/bookscenter/book_08472401.html",
+    title: "区块链技术原理与应用价值",
+    url: "https://wenku.baidu.com/view/44e6951e5bcfa1c7aa00b52acfc789eb162d9e5b?fr=xueshu&_wkts_=1765279617199",
     type: "论文",
    领域: "基础理论",
-    source: "清华大学出版社",
-    publishDate: "2025-09-15",
-    abstract: "本文深入探讨了区块链技术的基本原理、核心特性和应用场景，分析了区块链技术在金融、供应链、医疗等领域的创新应用模式，并对未来发展趋势进行了展望。",
-    citations: 128,
-    link: "#"
+    source: "骆慧勇",
+    publishDate: "2016-07-05",
+    abstract: "本文从技术层面解析区块链的核心,介绍了区块链相关计算机技术、数学知识以及区块链的信息交互原理,总结了区块链技术的三大价值和优缺点,并对未来应用前景进行预测。",
+    citations: 12,
+    link: "https://wenku.baidu.com/view/44e6951e5bcfa1c7aa00b52acfc789eb162d9e5b?fr=xueshu&_wkts_=1765279617199"
   },
   {
     id: 2,
@@ -26,7 +26,7 @@ const knowledgeResources = [
     publishDate: "2025-03-14",
     abstract: "本报告详细分析了智能合约中常见的安全漏洞类型，包括重入攻击、整数溢出、访问控制等问题，并提供了相应的防护措施和最佳实践指南。",
     citations: 87,
-    link: "#"
+    link: "https://web3caff.com/archives/120018"
   },
   {
     id: 3,
@@ -34,71 +34,71 @@ const knowledgeResources = [
     url: "https://news.qq.com/rain/a/20250613A030LU00",
     type: "研究报告",
    领域: "金融应用",
-    source: "区块链金融研究院",
-    publishDate: "2025-11-05",
+    source: "PANews",
+    publishDate: "2025-06-13",
     abstract: "本报告全面梳理了DeFi生态系统的发展现状，分析了主要DeFi协议的运行机制、风险特征和创新点，并对DeFi与传统金融的融合路径进行了探讨。",
-    citations: 215,
-    link: "#"
+    citations: 145,
+    link: "https://news.qq.com/rain/a/20250613A030LU00"
   },
   {
     id: 4,
-    title: "联盟链技术架构与实现",
-    url: "https://blog.csdn.net/baidu_38990811/article/details/108079889",
-    type: "技术文档",
-   领域: "技术架构",
-    source: "呆呆_小茗博主",
-    publishDate: "2025-08-30",
-    abstract: "本文详细介绍了联盟链的技术架构设计原则、关键技术组件和实现方案，包括共识机制、权限管理、跨链交互等核心功能模块的设计与实现。",
+    title: "区块链研究综述",
+    url: "https://wenku.baidu.com/view/df6e370e534de518964bcf84b9d528ea80c72ff1?fr=xueshu&_wkts_=1765280124285",
+    type: "研究报告",
+   领域: "基础理论",
+    source: "王元地 李粒 胡谍",
+    publishDate: "2018-03-06",
+    abstract: "从区块链的概念,交易流程,基础架构,优势及问题,理论来源,技术支撑,发展及应用等多个角度对已有研究进行文献综述,对区块链进行全面阐述,希冀为相关研究提供有益的参考和借鉴.",
     citations: 63,
-    link: "#"
+    link: "https://wenku.baidu.com/view/df6e370e534de518964bcf84b9d528ea80c72ff1?fr=xueshu&_wkts_=1765280124285"
   },
   {
     id: 5,
-    title: "区块链技术作为雾计算安全与隐私",
-    url: "https://www.sciencedirect.com/science/article/abs/pii/S0140366421004321",
+    title: "Blockchain technology as a Fog computing security and privacy solution: An overview",
+    url: "https://www.sciencedirect.com/science/article/pii/S0140366421004321",
     type: "论文",
    领域: "隐私保护",
-    source: "计算机通信",
+    source: "Computer Communications",
     publishDate: "2022-01-15",
     abstract: "研究结果阐明了区块链在雾计算安全与基于隐私的增强中的愿景，并引发了对开放挑战和未来研究方向的关注。",
     citations: 94,
-    link: "#"
+    link: "https://www.sciencedirect.com/science/article/pii/S0140366421004321"
   },
   {
     id: 6,
-    title: "区块链与能源：文献计量分析与综述",
-    url: "https://www.sciencedirect.com/science/article/abs/pii/S1364032120308819",
+    title: "Blockchain and energy: A bibliometric analysis and review",
+    url: "https://www.sciencedirect.com/science/article/pii/S1364032120308819",
     type: "综述",
    领域: "性能优化",
-    source: "计算机科学与技术学报",
+    source: "Renewable and Sustainable Energy Reviews",
     publishDate: "2021-03-28",
     abstract: "本文基于166篇文献的基础参考文献，通过共同引用分析分析区块链与能源的交叉领域。",
     citations: 156,
-    link: "#"
+    link: "https://www.sciencedirect.com/science/article/pii/S1364032120308819"
   },
   {
     id: 7,
-    title: "区块链在可持续智慧城市中的应用",
-    url: "https://www.sciencedirect.com/science/article/abs/pii/S2210670723003086",
+    title: "Blockchain Applications in Sustainable Smart Cities",
+    url: "https://www.sciencedirect.com/science/article/pii/S2210670723003086",
     type: "论文",
    领域: "应用创新",
-    source: "可持续城市与社会",
+    source: "Sustainable Cities and Society",
     publishDate: "2023-10-12",
     abstract: "总结了BCT在可持续智慧城市中角色的最新趋势、挑战及未来研究方向。探讨了区块链技术在智慧城市中的隐私保护机制及其应用案例。",
     citations: 132,
-    link: "#"
+    link: "https://www.sciencedirect.com/science/article/pii/S2210670723003086"
   },
   {
     id: 8,
-    title: "比特币用于旅游可持续发展目标？",
-    url: "https://www.sciencedirect.com/org/science/article/abs/pii/S1757988020000161",
+    title: "Road block(chain): bit(coin)s for tourism sustainable development goals?",
+    url: "https://www.sciencedirect.com/science/article/pii/S1757988020000161",
     type: "研究报告",
    领域: "金融应用",
-    source: "亚伦·谭",
+    source: "Aaron Tan",
     publishDate: "2019-05-20",
     abstract: "本文旨在讨论区块链和加密货币的颠覆性使用及其影响，并倡导它们作为推动可持续旅游发展目标的推动者。",
     citations: 78,
-    link: "#"
+    link: "https://www.sciencedirect.com/science/article/pii/S1757988020000161"
   },
   {
     id: 9,
@@ -110,7 +110,7 @@ const knowledgeResources = [
     publishDate: "2020-05-27",
     abstract: "本文聚焦全国人大代表孔发龙关于加速区块链自主核心技术创新力度的建议。",
     citations: 49,
-    link: "#"
+    link: "https://www.cnipa.gov.cn/art/2020/5/27/art_779_13490.html"
   },
   {
     id: 10,
@@ -122,56 +122,80 @@ const knowledgeResources = [
     publishDate: "2019-10-30",
     abstract: "本文系统梳理了我国区块链技术发展的战略方向与创新路径，结合习近平总书记对区块链核心技术突破的重要指示和权威专利分析报告，提出关键技术攻关与产业生态建设策略。",
     citations: 56,
-    link: "#"
+    link: "https://www.cnipa.gov.cn/art/2019/10/30/art_55_126622.html"
   },
   {
     id: 11,
-    title: "区块链技术安全性调查",
+    title: "A survey on blockchain technology and its security",
     url: "https://www.sciencedirect.com/science/article/pii/S2096720922000070",
     type: "研究报告",
    领域: "安全",
-    source: "区块链：研究与应用",
+    source: "Blockchain: Research and Applications",
     publishDate: "2022-10-20",
     abstract: "在本文中，我们首先对区块链技术进行了更深入的调研，特别是其历史、共识算法的量化比较、加密技术的细节，以及区块链应用的综合列表。此外，区块链本身的安全性也是本文关注的重点。",
     citations: 81,
-    link: "#"
+    link: "https://www.sciencedirect.com/science/article/pii/S2096720922000070"
   },
   {
     id: 12,
-    title: "区块链分布式能源综述：对机构发展的影响",
-    url: "https://www.sciencedirect.com/science/article/abs/pii/S1364032119301352",
+    title: "Review of blockchain-based distributed energy: Implications for institutional development",
+    url: "https://www.sciencedirect.com/science/article/pii/S1364032119301352",
     type: "论文",
    领域: "应用",
     source: "可再生与可持续能源评审",
     publishDate: "2019-06-29",
     abstract: "本文旨在推动能源领域区块链构建更有据可循的制度架构，推动研究的扩展。",
     citations: 118,
-    link: "#"
+    link: "https://www.sciencedirect.com/science/article/pii/S1364032119301352"
   },
   {
     id: 13,
-    title: "电力系统区块链：当前趋势与未来应用",
-    url: "https://www.sciencedirect.com/science/article/abs/pii/S1364032119307932",
+    title: "Blockchain for power systems: Current trends and future applications",
+    url: "https://www.sciencedirect.com/science/article/pii/S1364032119307932",
     type: "论文",
    领域: "技术创新",
     source: "可再生与可持续能源评审",
     publishDate: "2020-03",
     abstract: "本文旨在提出关于区块链技术在电力系统领域的广泛应用视角，阐明这一有前景技术的一些技术细节、迄今开发的功能和应用，同时聚焦电力领域创新应用的未来。",
     citations: 85,
-    link: "#"
+    link: "https://www.sciencedirect.com/science/article/pii/S1364032119307932"
   },
   {
     id: 14,
-    title: "区块链在政府中的应用:分布式账本技术在信息共享中的益处与影响",
-    url: "https://www.sciencedirect.com/science/article/abs/pii/S0740624X17303155",
+    title: "Blockchain in government: Benefits and implications of distributed ledger technology for information sharing",
+    url: "https://www.sciencedirect.com/science/article/pii/S0740624X17303155",
     type: "论文",
    领域: "政策法规",
     source: "政府信息季刊",
     publishDate: "2017-9",
     abstract: "本文核心问题是区块链技术是否将带来创新和政府流程的转型。",
     citations: 77,
-    link: "#"
-  }
+    link: "https://www.sciencedirect.com/science/article/pii/S0740624X17303155"
+  },
+  {
+    id: 15,
+    title: "区块链产业生态及发展趋势",
+    url: "https://wenku.baidu.com/view/c7a71025ff4733687e21af45b307e87100f6f872?aggId=df6e370e534de518964bcf84b9d528ea80c72ff1&fr=catalogMain_query2ODlist_recall%3Awk_recommend_main3&_wkts_=1765280531136",
+    type: "研究报告",
+   领域: "基础理论",
+    source: "中国标准化协会",
+    publishDate: "2018-01-17",
+    abstract: "本文从产业生态、发展趋势、技术创新、政策法规等方面对区块链产业进行了详细分析。",
+    citations: 201,
+    link: "https://wenku.baidu.com/view/c7a71025ff4733687e21af45b307e87100f6f872?aggId=df6e370e534de518964bcf84b9d528ea80c72ff1&fr=catalogMain_query2ODlist_recall%3Awk_recommend_main3&_wkts_=1765280531136"
+  },
+  {
+    id: 16,
+    title: "区块链隐私保护研究综述",
+    url: "https://www.zhangqiaokeyan.com/academic-journal-cn_journal-computer-research-development_thesis/0201241581550.html",
+    type: "研究报告",
+   领域: "隐私保护",
+    source: "计算机研究与发展",
+    publishDate: "2017-10-01",
+    abstract: "介绍区块链技术架构,定义区块链技术中身份隐私和交易隐私的概念,分析区块链技术在隐私保护方面存在的优势和不足,并分类描述现有研究中针对区块链隐私的攻击方法.",
+    citations: 201,
+    link: "https://www.zhangqiaokeyan.com/academic-journal-cn_journal-computer-research-development_thesis/0201241581550.html"
+  },
 
 ];
 
