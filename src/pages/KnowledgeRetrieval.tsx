@@ -520,10 +520,7 @@ export default function KnowledgeRetrieval() {
                             <i className="fa-solid fa-calendar-alt mr-1"></i>
                             {formatDate(resource.publishDate)}
                           </span>
-                          <span className="text-sm text-gray-400">
-                            <i className="fa-solid fa-quote-right mr-1"></i>
-                            引用: {resource.citations}
-                          </span>
+
                         </div>
                       </div>
                     </div>
@@ -598,36 +595,29 @@ export default function KnowledgeRetrieval() {
           <div className="lg:col-span-1">
             {/* 热门资源 */}
             <div className="bg-[#0c0c2a] rounded-xl p-6 border border-[#1a1a3a] mb-8">
-              <h3 className="text-xl font-bold mb-6">热门资源</h3>
+              <h3 className="text-xl font-bold mb-6">文章来源</h3>
               <div className="space-y-4">
-                {knowledgeResources
-                  .sort((a, b) => b.citations - a.citations)
-                  .slice(0, 5)
-                  .map((resource, index) => (
-                    <motion.div
-                      key={resource.id}
-                      initial={{ opacity: 0, x: 20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.5, delay: index * 0.1 }}
-                      className="flex"
-                    >
-                      <div className="w-6 h-6 rounded-full bg-[#1a1a3a] flex items-center justify-center mr-3 text-sm font-bold text-[#00f5ff]">
-                        {index + 1}
-                      </div>
-                      <div>
-                        <h4 
-                          className="text-sm font-semibold mb-1 hover:text-[#00f5ff] transition-colors cursor-pointer line-clamp-2"
-                          onClick={() => window.open(resource.url, '_blank')}
-                        >
-                          {resource.title}
-                        </h4>
-                        <div className="flex items-center text-xs text-gray-400">
-                          <i className="fa-solid fa-quote-right mr-1"></i>
-                          <span>引用: {resource.citations}</span>
-                        </div>
-                      </div>
-                    </motion.div>
-                  ))}
+                {[
+                  { name: "腾讯网", icon: "fa-globe" },
+                  { name: "web3caff", icon: "fa-code" },
+                  { name: "ScienceDirect", icon: "fa-book" },
+                  { name: "国家知识产权局", icon: "fa-building" },
+                  { name: "百度文库", icon: "fa-file-alt" },
+                  { name: "掌桥科研", icon: "fa-flask" }
+                ].map((source, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, x: 20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    className="flex items-center"
+                  >
+                    <div className="w-8 h-8 rounded-full bg-[#1a1a3a] flex items-center justify-center mr-3 text-[#00f5ff]">
+                      <i className={`fa-solid ${source.icon}`}></i>
+                    </div>
+                    <span className="text-gray-300">{source.name}</span>
+                  </motion.div>
+                ))}
               </div>
             </div>
             
@@ -636,12 +626,15 @@ export default function KnowledgeRetrieval() {
               <h3 className="text-xl font-bold mb-6">研究领域分布</h3>
               <div className="space-y-4">
                 {[
-                  { name: "基础理论", count: 128, percentage: 32 },
-                  { name: "安全", count: 95, percentage: 24 },
-                  { name: "金融应用", count: 76, percentage: 19 },
-                  { name: "技术架构", count: 42, percentage: 11 },
-                  { name: "应用创新", count: 38, percentage: 9 },
-                  { name: "其他", count: 21, percentage: 5 }
+                  { name: "基础理论", count: 3, percentage: 18.75 },
+                  { name: "安全", count: 2, percentage: 12.5 },
+                  { name: "金融应用", count: 2, percentage: 12.5 },
+                  { name: "隐私保护", count: 2, percentage: 12.5 },
+                  { name: "性能优化", count: 2, percentage: 12.5 },
+                  { name: "政策法规", count: 2, percentage: 12.5 },
+                  { name: "应用创新", count: 1, percentage: 6.25 },
+                  { name: "应用", count: 1, percentage: 6.25 },
+                  { name: "技术创新", count: 1, percentage: 6.25 }
                 ].map((field, index) => (
                   <motion.div
                     key={index}

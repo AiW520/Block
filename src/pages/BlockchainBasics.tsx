@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useTheme } from '@/hooks/useTheme';
+import { Link } from 'react-router-dom';
 
 // 区块链基础分类数据
 const blockchainCategories = [
@@ -204,9 +205,9 @@ export default function BlockchainBasics() {
               </div>
               
               <div className="mt-10">
-                <button className="btn-hover w-full py-3 rounded-lg bg-gradient-to-r from-[#00f5ff] to-[#00ff9d] text-[#0a0a1f] font-bold text-lg">
-                  <a href="https://fisco-doc.readthedocs.io/zh/release-2-dev/docs/introduction.html">开始学习之旅</a>
-                </button>
+                <Link to="/blockchain-knowledge-game" className="btn-hover w-full py-3 rounded-lg bg-gradient-to-r from-[#00f5ff] to-[#00ff9d] text-[#0a0a1f] font-bold text-lg block text-center">
+                  开始学习之旅
+                </Link>
               </div>
             </div>
           </motion.div>

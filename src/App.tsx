@@ -5,6 +5,8 @@ import ProgrammingLanguages from "@/pages/ProgrammingLanguages";
 import CompetitionChannels from "@/pages/CompetitionChannels";
 import KnowledgeRetrieval from "@/pages/KnowledgeRetrieval";
 import BlockchainIDE from "@/pages/BlockchainIDE";
+import JavaFunGame from "@/pages/JavaFunGame";
+import BlockchainKnowledgeGame from "@/pages/BlockchainKnowledgeGame";
 import Navbar from "@/components/Navbar";
 import ChatWidget from "@/components/ChatWidget";
 import Footer from "@/components/Footer";
@@ -33,6 +35,8 @@ export default function App() {
             <Route path="/competitions" element={<CompetitionChannels />} />
             <Route path="/knowledge" element={<KnowledgeRetrieval />} />
             <Route path="/ide" element={<BlockchainIDE />} />
+            <Route path="/java-fun-game" element={<JavaFunGame />} />
+            <Route path="/blockchain-knowledge-game" element={<BlockchainKnowledgeGame />} />
           </Routes>
         </main>
         <Footer />

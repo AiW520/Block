@@ -41,7 +41,8 @@ const features = [
     description: "搜索区块链论文、技术文档，按领域、时间、来源筛选结果",
     icon: "fa-search",
     link: "/knowledge"
-  }
+  },
+
 ];
 
 export default function Home() {
@@ -104,7 +105,7 @@ export default function Home() {
             <div className="w-24 h-1 bg-gradient-to-r from-[#00f5ff] to-[#00ff9d] mx-auto"></div>
           </motion.div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 justify-items-center">
             {features.map((feature, index) => (
               <motion.div
                 key={feature.id}
@@ -215,13 +216,13 @@ export default function Home() {
                 to="/ide"
                 className="btn-hover px-8 py-3 rounded-full bg-gradient-to-r from-[#00f5ff] to-[#00ff9d] text-[#0a0a1f] font-bold text-lg text-center"
               >
-                立即开始
+                合约部署
               </Link>
               <Link
-                to="/knowledge"
+                to="/java-fun-game"
                 className="btn-hover px-8 py-3 rounded-full bg-transparent border-2 border-[#00f5ff] text-[#00f5ff] font-bold text-lg text-center"
               >
-                浏览资源
+                趣味开发
               </Link>
             </div>
           </motion.div>

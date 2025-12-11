@@ -14,6 +14,7 @@ const navItems: NavItem[] = [
   { id: 3, label: '编程语言', path: '/languages' },
   { id: 4, label: '竞赛渠道', path: '/competitions' },
   { id: 5, label: '知识检索', path: '/knowledge' },
+  
 ];
 
 export default function Navbar() {
